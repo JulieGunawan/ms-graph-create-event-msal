@@ -462,8 +462,9 @@ exports.addPath = addPath;
  * @returns   string
  */
 function getInput(name, options) {
-    const val = process.env[`INPUT_${name.replace(/ /g, '_').toUpperCase()}`] || '';
-    console.log(`\u001b[93m⌛ Getting input ${name} and ${option}...`);
+    const val = process.env[`INPUT_${name.replace(/ /g, '_').toUpperCase()}`] ?? '';
+    console.log(`\u001b[93m⌛ Getting input ${name} and ${options}...`);
+
     if (options && options.required && !val) {
         throw new Error(`Input required and not supplied: ${name}`);
     }
