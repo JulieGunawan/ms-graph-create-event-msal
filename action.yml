@@ -28,5 +28,5 @@ inputs:
   end:
     description: "(Optional) The date and time when the event should end (format - yyyy-MM-ddThh:mm:ss). If not specified end time will be next day 13:00 GMT."
 runs:
-  using: 'node16'
+  using: 'node18'
   main: 'dist/index.js'
